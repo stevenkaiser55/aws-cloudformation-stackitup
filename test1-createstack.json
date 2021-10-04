@@ -1,0 +1,11 @@
+{
+
+    "Resources": {
+  
+      "logicalresourcename": {
+        "Type": "AWS::S3::Bucket"
+      }
+  
+    }
+
+}
