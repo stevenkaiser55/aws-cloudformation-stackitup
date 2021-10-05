@@ -1,8 +1,9 @@
 {
+    "Description" : "Create a stack",
 
     "Resources": {
   
-      "logicalresourcename": {
+      "alogicalresourcename": {
         "Type": "AWS::S3::Bucket"
       }
   
