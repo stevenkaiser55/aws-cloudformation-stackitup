@@ -10,8 +10,8 @@
         "DeletionPolicy": "Retain",
         "Properties": {
             "AccessControl": "Private",
-        }
+        },
   
-    }
+    },
 
 }
