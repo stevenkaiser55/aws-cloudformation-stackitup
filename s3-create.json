@@ -1,0 +1,17 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+
+    "Description" : "Create a private bucket",
+
+    "Resources": {
+  
+      "stevenkaiser55": {
+        "Type": "AWS::S3::Bucket",
+        "DeletionPolicy": "Retain",
+        "Properties": {
+            "AccessControl": "Private",
+        }
+  
+    }
+
+}

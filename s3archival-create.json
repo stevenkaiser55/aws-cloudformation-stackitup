@@ -1,0 +1,35 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "archival3000days": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "Private",
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "GlacierRule",
+                            "Prefix": "glacier",
+                            "Status": "Enabled",
+                            "ExpirationInDays": 3000,
+                            "Transitions": [
+                                {
+                                    "TransitionInDays": 1,
+                                    "StorageClass": "GLACIER"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "archival3000days"
+            },
+            "Description": "Objects in this bucket transition to glacier in 1 day and are deleted after 3000 days if they have the glacier key prefix."
+        }
+    }
+}
