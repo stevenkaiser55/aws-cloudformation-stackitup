@@ -3,6 +3,7 @@
     "Resources": {
         "archival3000days": {
             "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain",
             "Properties": {
                 "AccessControl": "Private",
                 "LifecycleConfiguration": {
